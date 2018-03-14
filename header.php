@@ -11,11 +11,11 @@
 
 <body>
 
-<nav class="navbar navbar-default" style="height: 65px;font-size: 25px; font-family: allan; background-color: silver;">
+<nav class="navbar navbar-default" style="height: 70px;font-size: 30px; font-family: allan; background-color: silver;">
   <div class="container">
   <div class="navbar-header">
-    <a class="navbar-brand" style="padding-top: 3px;">
-    <img src="store-logo.png">
+    <a class="navbar-brand" style="padding-top: 10px;">
+    <img src="logo-php.png">
   </a>
 </div>
 
