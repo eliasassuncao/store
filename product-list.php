@@ -2,7 +2,7 @@
 include("connection.php");
 include("database-products.php");?>
 
-<div class="container">
+<div class="container" style="margin-top: 100px;">
     <?php
         $products = listProducts($connection);
         foreach($products as $product):

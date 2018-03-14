@@ -4,6 +4,7 @@ include("database-products.php");
 
 ?>
 
+<div style="margin-top: 100px;"> 
 <h1>Adicionar produto</h1>
 <form action="add-products.php" method="post">
     <table class="table">
@@ -24,6 +25,12 @@ include("database-products.php");
             <td><input class="form-control" type="text" name="image"></td>
         </tr>
         <tr>
+            <td></td>
+            <td><input class="" type="file" name="image">
+            <p class="help-block">Inpute uma imagem de seu computador caso prefira.</p>
+        </td>
+        </tr>
+        <tr>
             <td>Descrição</td>
             <td><textarea class="form-control" name="description"></textarea></td>
         </tr>
@@ -33,5 +40,38 @@ include("database-products.php");
     </table>
     
 </form>
+<form>
+<table class="table table-striped table-bordered" style="box-shadow: 2px 2px 15px">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sub</th>
+            <th>Preço</th>
+            <th>Imagem</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php 
+            $products = listProducts($connection);
+            foreach($products as $product):
+        ?>  
+        <tr>
+            <td><?= $product['name'] ?></td>
+            <td><?= $product['subname'] ?></td>
+            <td><?= $product['price'] ?></td>
+            <td><?= substr($product['image'], 0 , 50) ?></td>
+            <td><?= substr($product['description'], 0, 50) ?></td>
+        </tr>
+        <?php
+            endforeach
+        ?>
+    </tbody>
+</table>
+</form>
+</div>
+
+
+
 
 <?php include("footer.php");?>
