@@ -41,6 +41,15 @@ include("database-products.php");
     
 </form>
 <form>
+
+<?php
+    if(array_key_exists("remove", $_GET) && $_GET["remove"]=="true") {
+?>
+    <p class="text-success">PRODUTO REMOVIDO COM SUCESSO!</p>
+<?php
+    }
+?>
+
 <table class="table table-striped table-bordered" style="box-shadow: 2px 2px 15px">
     <thead>
         <tr>
@@ -62,6 +71,12 @@ include("database-products.php");
             <td><?= $product['price'] ?></td>
             <td><?= substr($product['image'], 0 , 50) ?></td>
             <td><?= substr($product['description'], 0, 50) ?></td>
+            <td>
+                <form action="del-products.php" method="post">
+                <input type="hidden" name="id" value="<?=$product['id']?>"/>
+                    <button class="btn btn-danger">Remover</button>
+                </form>
+            </td>
         </tr>
         <?php
             endforeach

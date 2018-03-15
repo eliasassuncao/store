@@ -14,3 +14,8 @@ function insertProducts($connection, $name, $price, $image, $description, $subna
     ('{$name}', '{$price}', '{$image}', '{$description}', '{$subname}') ";
     return mysqli_query($connection, $query);
 }
+
+function deleteProducts($connection, $id) {
+    $query = "delete from products where id = '{$id}'";
+    return mysqli_query($connection, $query);
+}
