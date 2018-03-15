@@ -9,9 +9,10 @@ function listProducts($connection) {
     return $products;
 }
 
-function insertProducts($connection, $name, $price, $image, $description, $subname) {
-    $query = "insert into products (name, price, image, description, subname) values 
-    ('{$name}', '{$price}', '{$image}', '{$description}', '{$subname}') ";
+function insertProducts($connection, $name, $price, $imageLink, $description, $subname, $imageFile) {
+    $query = "insert into products (name, price, imageLink, description, subname, imageFile) values 
+    ('{$name}', '{$price}', '{$imageLink}', '{$description}', '{$subname}', '{$imageFile}') ";
+    echo $query;
     return mysqli_query($connection, $query);
 }
 

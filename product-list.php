@@ -8,7 +8,13 @@ include("database-products.php");?>
         foreach($products as $product):
     ?> 
     <div class="col-lg-4 text-center" style="height: 400px; padding: 20px;">
-          <img class="img-circle" style="height: 200px; " src="<?= $product['image']?>" alt="">
+    <?php 
+        if(strlen($product['imageLink'])) { 
+    ?>
+        <img class="img-circle" style="height: 200px; " src="<?= $product['imageLink']?>" alt="">
+    <?php } else { ?>
+        <img class="img-circle" style="height: 200px; " src="<?= $product['imageFile']?>" alt="">
+    <?php } ?>
           <h3><?= $product['name']?>
             <small><?= $product['subname']?></small>
           </h3>

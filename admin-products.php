@@ -22,11 +22,11 @@ include("database-products.php");
         </tr>
         <tr>
             <td>Link imagem</td>
-            <td><input class="form-control" type="text" name="image"></td>
+            <td><input class="form-control" type="text" name="imageLink"></td>
         </tr>
         <tr>
             <td></td>
-            <td><input class="" type="file" name="image">
+            <td><input class="" type="file" name="imageFile">
             <p class="help-block">Inpute uma imagem de seu computador caso prefira.</p>
         </td>
         </tr>
@@ -56,8 +56,9 @@ include("database-products.php");
             <th>Nome</th>
             <th>Sub</th>
             <th>Preço</th>
-            <th>Imagem</th>
+            <th>ImagemLink</th>
             <th>Descrição</th>
+            <th>ImagemFile</th>
         </tr>
     </thead>
     <tbody>
@@ -69,8 +70,9 @@ include("database-products.php");
             <td><?= $product['name'] ?></td>
             <td><?= $product['subname'] ?></td>
             <td><?= $product['price'] ?></td>
-            <td><?= substr($product['image'], 0 , 50) ?></td>
+            <td><?= substr($product['imageLink'], 0 , 50) ?></td>
             <td><?= substr($product['description'], 0, 50) ?></td>
+            <td><?= $product['imageFile'] ?></td>
             <td>
                 <form action="del-products.php" method="post">
                 <input type="hidden" name="id" value="<?=$product['id']?>"/>

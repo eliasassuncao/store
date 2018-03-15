@@ -5,9 +5,11 @@ include("database-products.php");
     $name = $_POST["name"];
     $subname = $_POST["subname"];
     $price = $_POST["price"];
-    $image = $_POST["image"];
+    $imageLink = $_POST["imageLink"];
     $description = $_POST["description"];
-if(insertProducts($connection, $name, $price, $image, $description, $subname)){  ?>
+    $imageFile = $_POST["imageFile"];
+
+if(insertProducts($connection, $name, $price, $imageLink, $description, $subname, $imageFile)){  ?>
     <p class="text-success text-center" style="margin-top:100px;">PRODUTO <?= $name ?> ADICIONADO COM SUCESSO! </p>
 <?php } else{
  $msg = mysqli_error($connection);
