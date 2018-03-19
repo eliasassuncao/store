@@ -73,10 +73,11 @@ include("database-products.php");
             <td><?= substr($product['imageLink'], 0 , 50) ?></td>
             <td><?= substr($product['description'], 0, 50) ?></td>
             <td><?= $product['imageFile'] ?></td>
+            <td><a href="change-products.php?id=<?=$product['id']?>" class="btn btn-primary glyphicon glyphicon-pencil"></a></td>
             <td>
                 <form action="del-products.php" method="post">
                 <input type="hidden" name="id" value="<?=$product['id']?>"/>
-                    <button class="btn btn-danger">Remover</button>
+                    <button class="btn btn-danger glyphicon glyphicon-trash"></button>
                 </form>
             </td>
         </tr>

@@ -9,10 +9,28 @@ function listProducts($connection) {
     return $products;
 }
 
+function changeProduct($connection, $id, $name, $subname, $price, $imageLink, $description, $imageFile) {
+    if (strlen($imageFile)){
+        $query = "update products set name = '{$name}',subname = '{$subname}', price = {$price}, description = '{$description}', 
+        imageFile = '{$imageFile}'
+        where id = '{$id}' ";
+    }else {
+        $query = "update products set name = '{$name}',subname = '{$subname}', price = {$price}, description = '{$description}', 
+        imagelink = '{$imageLink}'
+        where id = '{$id}' ";
+    }
+    return mysqli_query($connection, $query);
+}
+
+function searchProduct($connection, $id) {
+    $query = "select * from products where id = {$id}";
+    $result = mysqli_query($connection, $query);
+    return mysqli_fetch_assoc($result);
+}
+
 function insertProducts($connection, $name, $price, $imageLink, $description, $subname, $imageFile) {
     $query = "insert into products (name, price, imageLink, description, subname, imageFile) values 
     ('{$name}', '{$price}', '{$imageLink}', '{$description}', '{$subname}', '{$imageFile}') ";
-    echo $query;
     return mysqli_query($connection, $query);
 }
 
