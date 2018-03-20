@@ -1,6 +1,9 @@
 <?php include("header.php");
 include("connection.php");
 include("database-products.php");
+include("logic-user.php");
+
+verifyUser();
 
 ?>
 

@@ -32,7 +32,7 @@
             <li><a href="#">Perfil</a></li>
             <li><a href="admin-products.php">Gerenciar produtos(admin)</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Exit</a></li>
+            <li><a href="logout.php">Exit</a></li>
           </ul>
         </li>
       </ul>
