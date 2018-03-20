@@ -2,7 +2,6 @@
 include("connection.php");
 include("database-products.php");
 include("logic-user.php");
-
 verifyUser();
 
 ?>
@@ -43,16 +42,10 @@ verifyUser();
     </table>
     
 </form>
+
+<?php showAlert("success"); ?>
+
 <form>
-
-<?php
-    if(array_key_exists("remove", $_GET) && $_GET["remove"]=="true") {
-?>
-    <p class="text-success">PRODUTO REMOVIDO COM SUCESSO!</p>
-<?php
-    }
-?>
-
 <table class="table table-striped table-bordered" style="box-shadow: 2px 2px 15px">
     <thead>
         <tr>

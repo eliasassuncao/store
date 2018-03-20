@@ -1,3 +1,6 @@
+<?php 
+  include("show-alert.php");
+?>
 <html>
     <head>
         <meta charset="utf-8">

@@ -4,7 +4,8 @@ session_start();
 
 function verifyUser() {
     if(!userIsLogged()){
-        header("Location: index.php?failureSecurity=1");
+        $_SESSION["danger"] = "Você não tem acesso a esta funcionalidade.";
+        header("Location: index.php");
         die();
     }
 }
@@ -23,4 +24,5 @@ function loginUser($email) {
 
 function logout() {
     session_destroy();
+    session_start();
 }

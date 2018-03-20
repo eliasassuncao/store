@@ -6,8 +6,9 @@ $email = $_POST['email'];
 $password = $_POST['passwordUser'];
 $user = searchUser($connection, $email, $password);
 if($user == null) {
-    header("Location: index.php?login=0");
+    $_SESSION["danger"] = "Usuário ou senha inválido.";
+    header("Location: index.php");
 }else{
     loginUser($user["email"]);
-    header("Location: index.php?login=1");
+    header("Location: index.php");
 }
