@@ -1,5 +1,5 @@
-<?php include("header.php");
-include("logic-user.php");
+<?php require_once("header.php");
+require_once("logic-user.php");
 ?>
 
 <?php 

@@ -1,6 +1,6 @@
-<?php include("connection.php");
-include("database-users.php");
-include("logic-user.php");
+<?php
+require_once("database-users.php");
+require_once("logic-user.php");
 
 $email = $_POST['email'];
 $password = $_POST['passwordUser'];

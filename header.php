@@ -1,5 +1,5 @@
 <?php 
-  include("show-alert.php");
+  require_once("show-alert.php");
 ?>
 <html>
     <head>
@@ -26,6 +26,7 @@
       <ul class="nav navbar-nav">
         <li><a href="index.php">Home<span class="sr-only">(current)</span></a></li>
         <li><a href="product-list.php">Produtos</a></li>
+        <li><a href="contact.php">Contato</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

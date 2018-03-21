@@ -1,6 +1,5 @@
-<?php include("header.php");
-include("connection.php");
-include("database-products.php");?>
+<?php require_once("header.php");
+require_once("database-products.php");?>
 
 <div class="container" style="margin-top: 100px;">
     <?php

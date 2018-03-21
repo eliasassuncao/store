@@ -1,7 +1,6 @@
-<?php include("header.php");
-include("connection.php");
-include("database-products.php");
-include("logic-user.php");
+<?php require_once("header.php");
+require_once("database-products.php");
+require_once("logic-user.php");
 
 verifyUser();
 

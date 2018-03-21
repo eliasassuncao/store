@@ -1,6 +1,5 @@
-<?php include("header.php");
-include("connection.php");
-include("database-products.php");
+<?php require_once("header.php");
+require_once("database-products.php");
 
     $id = $_POST['id'];
     $name = $_POST["name"];
