@@ -1,12 +1,11 @@
 <?php
 
-//IMPLEMENTAR
 session_start();
 $name = $_POST["name"];
 $email = $_POST["email"];
 $message = $_POST["message"];
 
-require_once("PHPMailer.php");
+require_once("PHPMailerAutoload.php");
 
 $mail = new PHPMailer();
 $mail->isSMTP();
@@ -15,7 +14,7 @@ $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 $mail->Username = "php.store.elias@gmail.com";
-$mail->Password = "~~~~~~";
+$mail->Password = "~~~~";
 
 $mail->setFrom("php.store.elias@gmail.com", "Cliente loja php");
 $mail->addAddress("php.store.elias@gmail.com");
